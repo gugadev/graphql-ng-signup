@@ -1,0 +1,22 @@
+.btn {
+  border: none;
+  border-radius: 25px;
+  font-family: 'Open Sans';
+  // font-family: 'Exo 2';
+  font-size: 15px;
+  letter-spacing: 1px;
+  // text-transform: uppercase;
+  height: 50px;
+  width: 100%;
+
+  &.primary {
+    background-color: #E94247;
+    color: rgba(255,255,255,.9);
+  }
+  &:hover, &:active {
+    background-color: darken(#E94247, 10%);
+  }
+  &:focus {
+    outline: none;
+  }
+}
