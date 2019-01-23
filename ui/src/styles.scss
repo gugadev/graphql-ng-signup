@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./app/ui/input/base.directive";
+@import "./app/ui/button/primary.directive";
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Open Sans';
+}
