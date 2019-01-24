@@ -14,8 +14,10 @@
     "lint": "tslint -p tsconfig.json -c tslint.json"
   },
   "dependencies": {
+    "@types/lokijs": "^1.5.2",
     "@types/pino": "^5.8.3",
     "apollo-server": "^2.3.1",
+    "lokijs": "^1.5.6",
     "pino": "^5.11.0",
     "pino-pretty": "^2.5.0",
     "reflect-metadata": "^0.1.13",
