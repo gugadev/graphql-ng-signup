@@ -1,3 +1,5 @@
 /node_modules
 
+src/database/data.json
+
 .DS_Store
