@@ -20,7 +20,7 @@ export default class UserResolver {
     return this.userService.find(id)
   }
   @Mutation(returns => User)
-  createUser(@Arg('userData') data: UserInput) {
+  createUser(@Arg('data') data: UserInput) {
     return this.userService.create(data)
   }
 }
