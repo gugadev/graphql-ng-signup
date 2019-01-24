@@ -1,8 +1,15 @@
-import { ApolloServer, makeExecutableSchema } from 'apollo-server'
-import typeDefs from '../types'
-import resolvers from '../resolvers'
+import { ApolloServer } from 'apollo-server'
+import { buildSchema } from 'type-graphql'
+import UserResolver from '../users/user.resolver'
 
-export default (): ApolloServer => {
-  const schema = makeExecutableSchema({ typeDefs, resolvers })
-  return new ApolloServer({ schema })
+export default async () => {
+  const schema = await buildSchema({
+    resolvers: [
+      UserResolver
+    ]
+  })
+  return new ApolloServer({
+    schema,
+    tracing: true
+  })
 }

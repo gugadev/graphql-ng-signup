@@ -1,21 +1,35 @@
 {
   "name": "back",
-  "version": "1.0.0",
-  "main": "index.js",
+  "description": "Backend for GraphQL Angular Tutorial",
+  "version": "0.0.1",
+  "author": "Gustavo Garzaki",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon"
+    "build": "tsc -p tsconfig.build.json",
+    "start": "ts-node -r tsconfig-paths/register src/main.ts",
+    "start:dev": "nodemon",
+    "start:debug": "nodemon --config nodemon-debug.json",
+    "prestart:prod": "rimraf dist && npm run build",
+    "start:prod": "node dist/main.js",
+    "lint": "tslint -p tsconfig.json -c tslint.json"
   },
   "dependencies": {
-    "@types/lodash.merge": "^4.6.4",
     "@types/lokijs": "^1.5.2",
+    "@types/pino": "^5.8.3",
     "apollo-server": "^2.3.1",
-    "graphql": "^14.1.1",
-    "lokijs": "^1.5.6"
+    "lokijs": "^1.5.6",
+    "pino": "^5.11.0",
+    "pino-pretty": "^2.5.0",
+    "reflect-metadata": "^0.1.13",
+    "rimraf": "^2.6.3",
+    "type-graphql": "^0.16.0",
+    "typedi": "^0.8.0"
   },
   "devDependencies": {
+    "@types/node": "^10.12.18",
     "nodemon": "^1.18.9",
     "ts-node": "^8.0.1",
+    "tsconfig-paths": "^3.7.0",
     "tslint": "^5.12.1",
     "typescript": "^3.2.4"
   }
