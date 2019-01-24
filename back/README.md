@@ -16,6 +16,6 @@ Our stack is quite simple:
 
 There are a bunch of scripts for you. The most importants are:
 
-- start:dev: to run the app using nodemon.
-- start:build: to transpile the application to ES6
-- start:prod: to run the application using node instead ts-node.
+- `start:dev`: to run the app using nodemon.
+- `start:build`: to transpile the application to ES6
+- `start:prod`: to run the application using node instead ts-node.
