@@ -6,8 +6,8 @@ import {
 
 @ObjectType()
 export default class User {
-  @Field(type => Int, { nullable: true })
-  id?: number
+  @Field(type => Int)
+  id: number
   @Field()
   email: string
   @Field()
