@@ -6,10 +6,6 @@
   <a href="#">Demo</a>
 </p>
 
-<p align="center">
-  <img src="https://g00glen00b.be/wp-content/uploads/2018/05/nodejs-apollo-graphql.png">
-</p>
-
 This is the repo of my tutorial series posted on [Dev.to](https://dev.to),
 
 ## So, what is this tutorial about?
