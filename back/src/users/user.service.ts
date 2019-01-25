@@ -11,7 +11,8 @@ export default class UserService {
     return this._.findOne({ id })
   }
   create(data: UserInput): User {
-    const { id } = this._.insert(data)
+    const body = { ...data, id: this._.count() + 1 }
+    const { id } = this._.insert(body)
     return this.find(id)
   }
 }
