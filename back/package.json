@@ -14,10 +14,12 @@
     "lint": "tslint -p tsconfig.json -c tslint.json"
   },
   "dependencies": {
+    "@types/bcryptjs": "^2.4.2",
     "@types/graphql": "^14.0.5",
     "@types/lokijs": "^1.5.2",
     "@types/pino": "^5.8.3",
     "apollo-server": "^2.3.1",
+    "bcryptjs": "^2.4.3",
     "class-validator": "^0.9.1",
     "graphql": "^14.1.1",
     "lokijs": "^1.5.6",
