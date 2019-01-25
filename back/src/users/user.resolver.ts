@@ -15,12 +15,12 @@ export default class UserResolver {
   @Inject()
   private userService: UserService
 
-  @Query(returns => User)
+  @Query(returns => User, { nullable: true })
   user(@Arg('id', type => Int) id: number) {
     return this.userService.find(id)
   }
   @Mutation(returns => User)
-  createUser(@Arg('userData') data: UserInput) {
+  createUser(@Arg('data') data: UserInput) {
     return this.userService.create(data)
   }
 }

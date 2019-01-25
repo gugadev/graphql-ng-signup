@@ -1,11 +1,10 @@
 import 'reflect-metadata'
-import { Container } from 'typedi'
-import { useContainer } from 'type-graphql'
+import enableDI from './container/bootstrap'
 import createServer from './server'
 import log from './logger'
 
 const run = async () => {
-  useContainer(Container)
+  enableDI()
   try {
     const server = await createServer()
     const { url } = await server.listen({ port: 3000 })
