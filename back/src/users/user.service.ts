@@ -1,4 +1,5 @@
 import { Service } from 'typedi'
+import { hash, genSalt } from 'bcryptjs'
 import db from '../database/client'
 import User from './user.type'
 import UserInput from './user.input'
@@ -10,8 +11,12 @@ export default class UserService {
   find(id: number): User {
     return this._.findOne({ id })
   }
-  create(data: UserInput): User {
-    const body = { ...data, id: this._.count() + 1 }
+  async create(data: UserInput): Promise<User> {
+    const body = {
+      ...data,
+      id: this._.count() + 1,
+      password: await hash(data.password, await genSalt(10))
+    }
     const { id } = this._.insert(body)
     return this.find(id)
   }
