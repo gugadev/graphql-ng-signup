@@ -1,3 +1,4 @@
+import { IsEmail } from 'class-validator'
 import {
   InputType,
   Field
@@ -6,6 +7,7 @@ import {
 @InputType()
 export default class UserInput {
   @Field(type => String)
+  @IsEmail()
   email: string
   @Field(type => String)
   password: string
