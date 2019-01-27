@@ -19,4 +19,9 @@
     border-bottom-color: rgba(255,255,255,.75);
     outline: none;
   }
+
+  &.error {
+    border-bottom-color: #f39c12;
+    color: #f39c12;
+  }
 }
