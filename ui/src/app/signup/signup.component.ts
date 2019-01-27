@@ -1,3 +1,4 @@
+import { User } from './../models/user';
 import { Component, OnInit } from '@angular/core'
 import { FormBuilder, FormGroup, Validators, AbstractControl, FormControl } from '@angular/forms'
 import { SignupService } from './signup.service'
@@ -10,14 +11,20 @@ import { map } from 'rxjs/operators'
 })
 export class SignupComponent implements OnInit {
   suForm: FormGroup
+  user: User
 
   constructor(
     private fb: FormBuilder,
     private ss: SignupService
-  ) { }
+  ) {
+    this.user = new User()
+  }
 
-  public signup(e: Event) {
-    console.log(e)
+  public signup() {
+    this.ss.register(this.user).subscribe((created: User) => {
+      alert('Registro exitoso')
+      this.suForm.reset()
+    })
   }
 
   ngOnInit() {
