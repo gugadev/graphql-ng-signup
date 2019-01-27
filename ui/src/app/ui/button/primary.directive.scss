@@ -13,10 +13,14 @@
     background-color: #E94247;
     color: rgba(255,255,255,.9);
   }
-  &:hover, &:active {
+  &:hover:not(:disabled), &:active:not(:disabled) {
     background-color: darken(#E94247, 10%);
   }
   &:focus {
     outline: none;
+  }
+  &:disabled {
+    cursor: not-allowed;
+    opacity: .6;
   }
 }
