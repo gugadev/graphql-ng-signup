@@ -16,8 +16,8 @@ export default class UserResolver {
   private userService: UserService
 
   @Query(returns => User, { nullable: true })
-  user(@Arg('id', type => Int) id: number) {
-    return this.userService.find(id)
+  user(@Arg('email') email: string) {
+    return this.userService.findByEmail(email)
   }
   @Mutation(returns => User)
   createUser(@Arg('data') data: UserInput) {
