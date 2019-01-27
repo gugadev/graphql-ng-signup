@@ -11,6 +11,9 @@ export default class UserService {
   find(id: number): User {
     return this._.findOne({ id })
   }
+  findByEmail(email: string): User {
+    return this._.findOne({ email })
+  }
   async create(data: UserInput): Promise<User> {
     const body = {
       ...data,
