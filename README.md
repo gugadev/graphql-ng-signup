@@ -1,9 +1,13 @@
 <h1 align="center">GraphQL Ng Signup</h1>
 
 <p align="center">
-  <a href="https://dev.to/gugadev/">Tutorial</a>
+  <a href="https://dev.to/gugadev/creando-un-formulario-con-graphql-y-angular---parte-i-1m9k">Tutorial</a>
   |
   <a href="#">Demo</a>
+</p>
+
+<p align="center">
+  <img src="https://i.imgur.com/qTrd7Xi.png" width="480">
 </p>
 
 This is the repo of my tutorial series posted on [Dev.to](https://dev.to),

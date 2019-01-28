@@ -1,9 +1,5 @@
 # GraphQLForm
 
-<p align="center">
-    <img src="https://i.imgur.com/XFtkbDN.png" />
-</p>
-
 This is the UI codebase for the GraphQL and Apollo tutorial. The app is built using Angular 7 and the Angular apollo client.
 
 ## Build
