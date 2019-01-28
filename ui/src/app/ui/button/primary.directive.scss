@@ -10,18 +10,19 @@
   width: 100%;
 
   &.primary {
-    background-color: #E94247;
-    background-color: #333;
+    // background-color: #E94247;
+    background-color: #555;
     color: rgba(255,255,255,.9);
   }
   &:hover:not(:disabled), &:active:not(:disabled) {
-    background-color: darken(#E94247, 10%);
+    // background-color: darken(#E94247, 10%);
+    background-color: #414141;
   }
   &:focus {
     outline: none;
   }
   &:disabled {
-    background-color: #222;
+    background-color: #414141;
     color: rgba(255, 255, 255, .3);
     cursor: not-allowed;
     // opacity: .6;
