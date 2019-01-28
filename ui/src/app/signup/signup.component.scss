@@ -1,16 +1,43 @@
 .container {
   background-color: #0F223F;
-  border-top: 5px solid #E94247;
+  background-color: #131313;
+  // border-top: 5px solid #E94247;
+  // border-top: 5px solid #16a085;
   height: 100vh;
-  padding: 50px 35px;
+  // padding: 50px 0;
   width: 100%;
 
-  .form {
+  > .overlay {
+    background-color: rgba(0,0,0,.6);
+  }
+
+  .side,
+  &.container {
+    background: url('/assets/img/dark-mountains.jpg') no-repeat;
+    background-size: cover;
+    position: relative;
+
+    > .overlay {
+      background-color: rgba(0,0,0,.5);
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    } 
+  }
+
+  form {
+    // box-shadow: 0 4px 8px 0 rgba(0,0,0,.2);
+    margin: 0 auto;
     max-width: 480px;
+    padding: 40px;
+    position: relative;
   }
 
   .image {
     height: 150px;
+    margin-top: 30px;
     text-align: center;
 
     img {
@@ -45,5 +72,21 @@
   }
   .actions {
     margin-top: 20px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .container {
+    display: flex;
+
+    form {
+      background: #131313;
+      flex: 0 0 480px;
+
+      .overlay { display: none; }
+    }
+    .side {
+      flex: 1;
+    }
   }
 }
