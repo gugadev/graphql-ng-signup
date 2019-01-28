@@ -14,14 +14,14 @@
         </div> -->
         <div class="form-group">
           <label for="email">correo</label>
-          <input type="email" id="email" formControlName="email" placeholder="Ingresa tu correo" autocomplete="off" appBaseInput [(ngModel)]="user.email" [ngClass]="{ error: email.dirty && email.errors }">
+          <input type="email" id="email" formControlName="email" placeholder="Ingresa tu correo" autocomplete="off" appBaseInput [ngClass]="{ error: email.dirty && email.errors }">
           <span class="error" *ngIf="email.errors && email.errors.email">Ingrese un correo válido</span>
           <span class="error" *ngIf="email.errors && email.errors.taken">El email ya está registrado</span>
         </div>
         <div class="form-group">
           <label for="password">contraseña</label>
-          <input type="password" id="password" formControlName="password" placeholder="Ingresa tu contraseña" autocomplete="off" appBaseInput [(ngModel)]="user.password" [ngClass]="{ error: email.dirty && password.errors }">
-          <span class="error" *ngIf="password.errors">Ingrese letras y números</span>
+          <input type="password" id="password" formControlName="password" placeholder="Ingresa tu contraseña" autocomplete="off" appBaseInput [ngClass]="{ error: password.dirty && password.errors }">
+          <span class="error" *ngIf="password.errors.pattern">Ingrese letras y números</span>
         </div>
       </article>
       <footer class="actions">
