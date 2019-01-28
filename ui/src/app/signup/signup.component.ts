@@ -11,17 +11,17 @@ import { map } from 'rxjs/operators'
 })
 export class SignupComponent implements OnInit {
   suForm: FormGroup
-  user: User
 
   constructor(
     private fb: FormBuilder,
     private ss: SignupService
-  ) {
-    this.user = new User()
-  }
+  ) {}
 
   public signup() {
-    this.ss.register(this.user).subscribe((created: User) => {
+    const user = new User
+    user.email = this.email.value
+    user.password = this.password.value
+    this.ss.register(user).subscribe((created: User) => {
       alert('Registro exitoso')
       this.suForm.reset()
     })
@@ -36,6 +36,7 @@ export class SignupComponent implements OnInit {
         this.validateEmailNotTaken.bind(this)
       ]),
       password: new FormControl('', [
+        Validators.required,
         Validators.pattern('^(?=.*[0-9])(?=.*[a-zA-Z])([a-zA-Z0-9]+)$')
       ])
     })
